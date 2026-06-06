@@ -5,9 +5,6 @@
 
 ---
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Lunarian0928&show_icons=true&theme=dark&hide_border=true)
-
-
 ## Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -44,3 +41,69 @@
 - JWT + Google OAuth 2.0 SSO 인증 시스템 전체 구현
 
 **GitHub URL**: https://github.com/AI-HealthCare-03/AH_03_06
+
+---
+
+### 의료 진단 및 위치 기반 병원/의사 탐색 플랫폼
+
+> 증상 입력으로 질병·진료과를 예측하고, 위치 기반으로 병원과 의사를 탐색하는 의료 정보 서비스
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+
+- 공개 의료 데이터의 한계로, 네이버 지식인 크롤링(54,570건)과 GPT-4o Zero-Shot 증강을 결합하여 학습 데이터를 직접 설계 및 구축 → KM-BERT 파인튜닝으로 Top-3 Accuracy 83% 달성
+- Flask 예측 서버 신뢰 점수(score) 0.4 미만 시 GPT-4o로 자동 Fallback하는 이중 파이프라인 설계로 예측 커버리지 확보
+- 일반 좌표 계산의 정확도 한계로, Hibernate Spatial + JTS 공간 인덱스를 도입하여 진료과·요일·운영시간·거리 복합 필터 검색 구현
+- 주관적 리뷰 점수의 신뢰도 문제로, Times Higher Education 대학 순위 기반 학위·수련·직책 유형별 가중치를 결합한 의사 신뢰도 점수 산출 알고리즘 직접 설계
+
+**GitHub**: https://github.com/orgs/cbnu-development-team-tuktak/repositories
+
+---
+
+### 개인 맞춤형 칼로리 소모량 예측 AI
+
+> 신체 및 운동 데이터를 바탕으로 개인화된 칼로리 소모량을 산출하는 회귀 모델
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=flat-square)
+![Optuna](https://img.shields.io/badge/Optuna-3B4EFF?style=flat-square)
+
+- 단순 피처로는 칼로리 소모의 물리적 메커니즘을 충분히 설명하지 못해, Keytel 공식(BMR 기반 생리학 공식)을 베이스라인으로 설정하고 잔차(Residual)만 트리 모델이 학습하는 구조 설계
+- 개인별 운동 패턴 차이를 반영하기 위해 K-Means 군집화로 운동 세션을 세분화하여 파생 변수로 활용
+- Optuna 기반 XGBoost·LightGBM·CatBoost·RandomForest 동시 최적화 후 RidgeCV 메타 모델 스태킹으로 예측 오차 최소화
+
+**GitHub**: https://github.com/Lunarian0928/calories-burned-prediction
+
+---
+
+### 심리/행동 데이터 기반 투표율 예측
+
+> 심리·행동 데이터 및 인구통계 정보를 활용한 국가 선거 투표 여부 예측 AI
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Random Forest](https://img.shields.io/badge/Random_Forest-217346?style=flat-square)
+![TabNet](https://img.shields.io/badge/TabNet-FF6B35?style=flat-square)
+
+- 단순 응답 점수로는 개인의 점수 부여 편향을 상쇄하지 못해, 심리 문항 간 1:1 교차 비율(Pairwise Ratio) 235개를 파생 변수로 생성하여 상대적 성향 강도를 수치화
+- 파생 변수 증가로 노이즈가 늘어남에 따라 RFECV 4-Seed 앙상블로 핵심 피처만 선별, Mach_score(마키아벨리즘 총점)가 압도적 1위 예측 근거로 확인
+- 트리 모델의 구조적 사각지대를 보완하기 위해 5 Repeat × 7-Fold 35개 신경망 앙상블을 결합한 이종 앙상블 구조 설계 → 최종 AUC 0.7814 달성
+
+**GitHub**: https://github.com/Lunarian0928/psychological-voting-prediction
+
+---
+
+### 건강검진 데이터 통계 분석 및 시각화
+
+> 대규모 건강검진 데이터를 전처리하고 주요 질환 발병 요인을 EDA로 도출
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Scipy](https://img.shields.io/badge/Scipy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=flat-square)
+
+- 단순 시각화로는 변수 간 상관관계의 통계적 유의미성을 입증할 수 없어, 단측 검정(p<0.05)을 적용하여 흡연과 동맥경화 지수(AI) 간의 상관관계를 수치로 검증
+- 흡연자 집단 내 동맥경화 위험군을 세분화하여 시각화, 집단별 위험도 차이를 명확히 도출
+
+**Notion**: https://www.notion.so/2eecaf5650aa815a8856ef9e0f8febde
