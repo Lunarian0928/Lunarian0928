@@ -23,8 +23,8 @@
 
 ## Projects
 
-### Viva — 건강검진 기반 AI 생활습관 가이드 서비스
-> 건강검진 수치 기반 복약·식단·운동·수면 가이드 자동 생성 반응형 웹 서비스
+### Viva — 진료기록 기반 AI 생활습관 가이드 서비스
+> 건강검진·진료기록·처방전을 기반으로 복약·식단·운동·수면 가이드를 자동 생성하는 반응형 웹 서비스
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B35?style=flat-square)
@@ -34,11 +34,13 @@
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
 
 #### 주요 기능 목록
-- 혈압·혈당·BMI 조합 8개 위험군 분류 엔진 직접 설계
-- RAG 파이프라인 전체 구현 (ChromaDB → GPT-4o-mini → 파싱 → DB)
-- CLOVA OCR 처방전 14개 필드 추출 (텍스트·좌표 이중 검증)
-- 건강검진·처방약·식단 컨텍스트 기반 멀티턴 챗봇 (20턴 히스토리)
-- JWT + Google OAuth 2.0 SSO 인증 시스템 전체 구현
+- 혈압·혈당·콜레스테롤·BMI 수치 조합으로 8개 위험군 분류 및 개인 맞춤 식단 플랜 매핑 엔진 직접 설계
+- 식단·복약·수면 AI 가이드 자동 생성 구현 (임상진료지침 RAG 검색 → GPT-4o-mini 생성 → 파싱 → DB)
+- CLOVA OCR 처방전 자동 인식 구현 (요양기관·환자명·진단코드·처방약 목록 등 14개 필드 추출, 텍스트·좌표 이중 검증)
+- DUR 안전성 검사 5종 구현 (동일성분 중복·병용금기·회수약·1일 최대량 초과·효능군 중복, BLOCK/WARN/INFO 3단계)
+- 건강검진·처방약·식단·수면 컨텍스트 기반 멀티턴 챗봇 (20턴 히스토리, OpenAI Web Search 연동)
+- JWT + Google OAuth 2.0 인증 시스템 전체 구현 (Access 30분 / Refresh 14일)
+- APScheduler + FCM 푸시 알림 기반 복약 알림 시스템 구현
 
 **GitHub URL**: https://github.com/AI-HealthCare-03/AH_03_06
 
