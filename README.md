@@ -107,3 +107,31 @@
 - 흡연자 집단 내 동맥경화 위험군을 세분화하여 시각화, 집단별 위험도 차이를 명확히 도출
 
 **Notion**: https://www.notion.so/2eecaf5650aa815a8856ef9e0f8febde
+
+---
+
+## GitHub Stats
+
+![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Lunarian0928&theme=dark)
+
+<div>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Lunarian0928&theme=dark" width="48%"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Lunarian0928&theme=dark" width="48%"/>
+</div>
+
+---
+
+## Education & Certifications
+
+- 충북대학교 소프트웨어학부 (2020.03 ~ 2026.02) | GPA 4.12 / 4.5
+- 오즈코딩스쿨 AI 헬스케어 캠프 (2025.12 ~ 2026.06)
+- 정보처리산업기사 (2024.09)
+- 컴퓨터활용능력 2급 (2021.08)
+- 워드프로세서 (2022.02)
+
+---
+
+## Contact
+
+- Email: thanks092834@gmail.com
+- GitHub: https://github.com/Lunarian0928
