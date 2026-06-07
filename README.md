@@ -108,7 +108,7 @@
 - 단순 시각화로는 변수 간 상관관계의 통계적 유의미성을 입증할 수 없어, 단측 검정(p<0.05)을 적용하여 흡연과 동맥경화 지수(AI) 간의 상관관계를 수치로 검증
 - 흡연자 집단 내 동맥경화 위험군을 세분화하여 시각화, 집단별 위험도 차이를 명확히 도출
 
-**Notion**: https://www.notion.so/2eecaf5650aa815a8856ef9e0f8febde
+**GitHub**: https://github.com/Lunarian0928/smoking-health-analysis
 
 ---
 
